@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block title %}マニュアル | {{ block.super }}{% endblock %}
+
+{% block content %}
+<div class="container">
+  <div class="row">
+    <div class="col-3 order-md-first" id="sticky-sidebar">
+      <div class="sticky-top">
+        {% include "manual/snippets/sidebar.html" %}
+      </div>
+    </div>
+    <main class="col-md-8">
+      <h1 class="mb-4">マニュアル一覧</h1>
+      {% include "manual/snippets/main_post_list.html" %}
+      {% include "manual/snippets/pagination.html" %}
+    </main>
+  </div>
+</div>
+{% endblock %}
