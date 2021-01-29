@@ -1,9 +1,13 @@
 {% load markdown_extras %}
-  <h1>{{ object.title }}</h1>
-  <p>{{ object.published_at|date }}</p>
-  <p>{{ object.category.name }}</p>
+<div class="card">
+  <p class="published_date">{{ object.published_at|date }}</p>
+  <h1 class="title">{{ object.title }}</h1>
+  <div class="item-list">
+    <a href="{% url 'manual:category_post' object.category.slug %}" class="item">{{ object.category.name }}</a>
+  </div>
   {% for tag in object.tags.all %}
   {{ tag.name }}
   {% endfor %}
   <hr>
-{{ object.content|markdown|safe }}
+  {{ object.content|markdown|safe }}
+</div>

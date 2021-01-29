@@ -25,6 +25,8 @@ class IndexView(ListView):
 
 
 class CategoryListView(ListView):
+    model = Post
+    template_name = 'manual/category_list.html'
     queryset = Category.objects.annotate(
         num_posts=Count('post', filter=Q(post__is_public=True)))
 

@@ -14,7 +14,7 @@ pytest-django = "==4.1.0"
 django-cors-headers = "==3.6.0"
 pillow = "==8.1.0"
 django-mdeditor = "==0.1.18"
-Markdown = "3.3.3"
+Markdown = "==3.3.3"
 
 
 [requires]

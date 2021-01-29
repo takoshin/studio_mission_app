@@ -1,7 +1,7 @@
 {% for post in object_list %}
 {% if user.is_authenticated or post.is_public %}
 
-<div class="card mb-3">
+<div class="card mb-3 bg-light">
   {% if post.image %}
   <a href="{% url 'manual:post_detail' post.id %}">
     <img class="card-img-top" src="{{ post.image.url }}" alt="{{ post.title }}">
@@ -12,10 +12,10 @@
     <h5><span class="badge badge-secondary">下書き</span></h5>
     {% endif %}
     <a href="{% url 'manual:post_detail' post.id %}">
-      <h5 class="card-title text-secondary">{{ post.title }}</h5>
+      <h5 class="card-title text-secondary text-dark">{{ post.title }}</h5>
     </a>
     <p class="card-text">{{ post.published_at|date }}</p>
-    <a href="{% url 'manual:post_detail' post.id %}" class="btn btn-secondary">マニュアルを読む</a>
+    <a href="{% url 'manual:post_detail' post.id %}" class="btn btn-secondary bg-info">マニュアルを読む</a>
   </div>
 </div>
 
