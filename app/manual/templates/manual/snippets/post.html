@@ -3,11 +3,16 @@
   <p class="published_date">{{ object.published_at|date }}</p>
   <h1 class="title">{{ object.title }}</h1>
   <div class="item-list">
+    <p>カテゴリー : </p>
     <a href="{% url 'manual:category_post' object.category.slug %}" class="item">{{ object.category.name }}</a>
   </div>
-  {% for tag in object.tags.all %}
-  {{ tag.name }}
-  {% endfor %}
+  <div class="item-list">
+    <p>タグ: </p>
+    {% for tag in object.tags.all %}
+      <a href="{% url 'manual:tag_post' tag.slug %}" class="item">
+      {{ tag.name }}</a>
+    {% endfor %}
+  </div>
   <hr>
   {{ object.content|markdown|safe }}
 </div>

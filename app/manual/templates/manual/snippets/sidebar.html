@@ -21,7 +21,7 @@
     {% for tag in tags|dictsortreversed:"num_posts"|slice:":5" %}
     <li class="list-group-item d-flex justify-content-between align-items-center bg-light">
       <a href="{% url 'manual:tag_post' tag.slug %}" class="card-link text-secondary text-dark">{{ tag.name }}</a>
-      <span class="badge badge-secondary badge-pill text-dark">{{ tag.num_posts }}</span>
+      <span class="badge badge-secondary badge-pill text-light">{{ tag.num_posts }}</span>
     </li>
     {% endfor %}
   </ul>
