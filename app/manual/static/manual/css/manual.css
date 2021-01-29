@@ -76,3 +76,7 @@ body.fadeout::after {
   border-radius: 4px;
   margin: 3px;
 }
+
+.post{
+  padding: 30px;
+}

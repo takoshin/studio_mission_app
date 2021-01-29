@@ -18,6 +18,9 @@ li {
   color: black;
 }
 
+body.main{
+  font-family: -apple-system,Segoe UI,Helvetica Neue,Hiragino Kaku Gothic ProN,"メイリオ",meiryo,sans-serif;
+}
 body::after {
   content: '';
   position: fixed;
@@ -41,3 +44,39 @@ body.fadeout::after {
   -webkit-transform:scale(1.2);
   transform:scale(1.2);
 } */
+
+
+.title{
+  margin: 10px auto;
+  margin-top: 10px;
+  font-size: 4rem;
+  font-weight: bold;
+  margin-bottom: 16px;
+  font-feature-settings: "palt";
+  line-height: 1.4;
+}
+
+.item-list{
+  display: flex;
+  flex-wrap: wrap;
+  padding: 5px;
+}
+
+.published_date{
+  text-align: right;
+  margin: 5px;
+}
+
+.item{
+  display: flex;
+  align-items: center;
+  background-color: #eee;
+  color: #666;
+  padding: 4px 8px;
+  border-radius: 4px;
+  margin: 3px;
+}
+
+.post{
+  padding: 20px;
+}
