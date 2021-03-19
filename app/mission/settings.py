@@ -40,8 +40,6 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'polls.apps.PollsConfig',
     'manual.apps.ManualConfig',
-    'rest_framework',
-    'api.apps.ApiConfig',
     'corsheaders',
     'mdeditor',
     'markdown',
@@ -135,7 +133,7 @@ USE_TZ = True
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_ROOT = os.path.join(BASE_DIR, 'static/media')
 
 LOGIN_URL = 'accounts:login' # ログインしていないときのリダイレクト先
 LOGIN_REDIRECT_URL = 'polls:index' # ログイン後のリダイレクト先
